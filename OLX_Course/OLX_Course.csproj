@@ -170,9 +170,30 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\City.cs" />
+    <Compile Include="Entities\Tovar.cs" />
+    <Compile Include="Entities\Tovar_Image.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009080725599_Add DBset Category.cs" />
+    <Compile Include="Migrations\202009080725599_Add DBset Category.Designer.cs">
+      <DependentUpon>202009080725599_Add DBset Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009080825423_Add city.cs" />
+    <Compile Include="Migrations\202009080825423_Add city.Designer.cs">
+      <DependentUpon>202009080825423_Add city.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009080828255_Add tovar.cs" />
+    <Compile Include="Migrations\202009080828255_Add tovar.Designer.cs">
+      <DependentUpon>202009080828255_Add tovar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009080833044_Add tovar_images.cs" />
+    <Compile Include="Migrations\202009080833044_Add tovar_images.Designer.cs">
+      <DependentUpon>202009080833044_Add tovar_images.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -189,6 +210,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="photo\photo.jpg" />
+    <Content Include="photo\shipping.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -254,6 +277,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202009080725599_Add DBset Category.resx">
+      <DependentUpon>202009080725599_Add DBset Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009080825423_Add city.resx">
+      <DependentUpon>202009080825423_Add city.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009080828255_Add tovar.resx">
+      <DependentUpon>202009080828255_Add tovar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009080833044_Add tovar_images.resx">
+      <DependentUpon>202009080833044_Add tovar_images.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
