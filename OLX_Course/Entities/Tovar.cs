@@ -28,5 +28,6 @@ namespace OLX_Course.Entities
         [ForeignKey("ApplicationUser")]
         public string UserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
+        public virtual ICollection<Tovar_Image> Images { get; set; }
     }
 }
