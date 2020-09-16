@@ -1,0 +1,51 @@
+﻿@model OLX_Course.Models.TovarDetailViewModel
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<div class="main2">
+    <div class="right">
+        <div class="block2">
+            <div class="user">
+                <h2>@Model.User_name</h2>
+                <button class="view">Дивитись всі оголошення</button>
+            </div>
+        </div>
+    </div>
+    <div class="left">
+        <div class="block4">
+            <div class="temp">
+                <h1>@Model.Name</h1>
+            </div>
+            <div class="img">
+                <img src="@Model.Images.First()">
+            </div>
+        </div>
+        <div class="block5">
+            <div class="t1">
+                <h1>Всі фото</h1>
+            </div>
+            <div class="t2">
+                @foreach(var item in Model.Images)
+                {
+                    <img src="~/photo/" + @item/>
+                }
+            </div>
+        </div>
+        <div class="block6">
+            <div class="t1">
+                <h1>Опис</h1>
+            </div>
+            <p>
+               @Model.Description
+            </p>
+        </div>
+        <div class="block8">
+            <div class="temp2">
+                <span>@Model.Cost грн</span>
+                <input type="button" value="Замовити">
+            </div>
+        </div>
+    </div>
+</div>

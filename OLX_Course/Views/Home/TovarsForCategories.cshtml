@@ -8,13 +8,12 @@
 
 @foreach (var item in Model)
 {
-    
     <div class="block1">
         <div class="img_tovar">
             <img src="~/photo/@item.Image" />
         </div>
         <div class="main">
-            <h3 class="nameTovar"> @Html.DisplayFor(modelItem => item.Name)</h3>
+            <a href="@Url.Action("DetailsTovar", "Home", new { item.Id })"><h3 class="nameTovar"> @Html.DisplayFor(modelItem => item.Name)</h3></a>
             <p class="cityTovar">  @Html.DisplayFor(modelItem => item.City_Name)</p>
         </div>
         <div class="cost">

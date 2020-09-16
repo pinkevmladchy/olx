@@ -214,9 +214,17 @@
     <Content Include="Content\Site.css" />
     <Content Include="photo\accesour.png" />
     <Content Include="photo\auto.png" />
+    <Content Include="photo\chehly.jpg" />
     <Content Include="photo\clothes.png" />
     <Content Include="photo\house.png" />
+    <Content Include="photo\iphone 8%282%29.jpg" />
+    <Content Include="photo\iphone 8.jpg" />
+    <Content Include="photo\iphone_x%282%29.jpg" />
+    <Content Include="photo\iphone_x.jpg" />
     <Content Include="photo\phone.png" />
+    <Content Include="photo\renault.jpeg" />
+    <Content Include="photo\reno%282%29.png" />
+    <Content Include="photo\reno%283%29.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -267,6 +275,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\TovarsForCategories.cshtml" />
+    <Content Include="Views\Home\DetailsTovar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

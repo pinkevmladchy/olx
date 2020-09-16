@@ -38,18 +38,30 @@ namespace OLX_Course.Controllers
 
         public ActionResult TovarsForCategories(int id)
         {
-            var categoria = context.Categories.FirstOrDefault(x => x.Id.Equals(id)).Name;
-            List<TovarViewModel> model = context.Tovars.Select(x => new TovarViewModel
+            List<TovarViewModel> model = context.Tovars.Where(x=>x.CategoryId==id).Select(x => new TovarViewModel
             {
                 Id = x.Id,
                 Image = x.Images.FirstOrDefault().Image,
                Name=x.Name,
                Cost=x.Cost,
-               Description=x.Description,
                City_Name=x.City.Name,
-               Category_name=x.Category.Name,
-               User_name=x.ApplicationUser.UserName
-            }).Where(x=>x.Category_name==categoria).ToList();
+            }).ToList();
+            return View(model);
+        }
+
+        public ActionResult DetailsTovar(int id)
+        {
+            TovarDetailViewModel model = context.Tovars.Select(x => new TovarDetailViewModel
+            {
+                Id = x.Id,
+                Images = x.Images.Select(y=>y.Image).ToList(),
+                Name = x.Name,
+                Cost = x.Cost,
+                Description = x.Description,
+                City_Name = x.City.Name,
+                Category_name = x.Category.Name,
+                User_name = x.ApplicationUser.UserName
+            }).Where(x => x.Id==id).First();
             return View(model);
         }
     }
