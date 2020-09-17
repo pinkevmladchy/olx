@@ -15,8 +15,8 @@
 .search_btn {
     height: 40px;
     width: 10%;
-    margin-top: 20px;
     background-color: #1b1b1b;
+    line-height:28px;
     color: #939393;
     border-radius: 5px;
     outline: none;
@@ -100,7 +100,7 @@ a:hover{
 /*details*/
 .main2 {
     width: 100%;
-    height: 1238px;
+    height: 1150px;  
     background-color: #F3F4F5;
     padding: 20px;
 }
@@ -143,21 +143,21 @@ a:hover{
 }
 
 .img img {
-        min-width: 805px;
-        max-width: 805px;
-        height: 459px;
-    }
+    margin-left:25%;
+    width:50%;
+
+}
 
 .temp {
-    height: 83px;
+    height: 50px;
     width: 100%;
 }
 
 .block5 {
+    margin-top:10px;
     background: #FFFFFF;
     box-shadow: 0px 10px 10px rgba(14, 154, 255, 0.05);
     border-radius: 10px;
-    height: 178px;
     left: 168px;
 }
 
@@ -229,6 +229,7 @@ a:hover{
     }
 
 .block8 {
+    margin-top: 10px;
     background: #FFFFFF;
     box-shadow: 0px 10px 10px rgba(14, 154, 255, 0.05);
     border-radius: 10px;
@@ -275,7 +276,6 @@ a:hover{
 
 .temp2 input {
     height: 40px;
-    margin-top: 20px;
     background-color: #1b1b1b;
     color: #939393;
     border-radius: 5px;

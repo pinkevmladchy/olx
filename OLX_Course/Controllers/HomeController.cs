@@ -64,5 +64,30 @@ namespace OLX_Course.Controllers
             }).Where(x => x.Id==id).First();
             return View(model);
         }
+        public ActionResult TovarsUser(string user_name)
+        {
+            List<TovarViewModel> model = context.Tovars.Where(x=>x.ApplicationUser.UserName==user_name)
+            .Select(x=> new TovarViewModel
+            {
+                Id = x.Id,
+                Image = x.Images.FirstOrDefault().Image,
+                Name = x.Name,
+                Cost = x.Cost,
+                City_Name = x.City.Name,
+            }).ToList();
+            return View(model);
+        }
+        public ActionResult TovarsSearch(string tovar_name)
+        {
+            List<TovarViewModel> model = context.Tovars.Where(x => x.Name.Contains(tovar_name)).Select(x => new TovarViewModel
+            {
+                Id = x.Id,
+                Image = x.Images.FirstOrDefault().Image,
+                Name = x.Name,
+                Cost = x.Cost,
+                City_Name = x.City.Name,
+            }).ToList();
+            return View(model);
+        }
     }
 }

@@ -3,23 +3,25 @@
 
 @{
 
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Список оголошень OLX";
 }
 
-<div class="search_div">
-    <h1 class="text-center" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-top:30px">OLX - знайдеться все та навіть більше</h1>
-    <input type="text" placeholder="Що шукаєте?" class="search_inp"/>
-    <input type="button" value="Знайти" class="search_btn"/>
-</div>
-
+@using (Html.BeginForm("TovarForSearch", "Home"))
+{
+    <div class="search_div">
+        <h1 class="text-center" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-top:30px">OLX - знайдеться все та навіть більше</h1>
+        <input type="text" name="tovar_name" placeholder="Що шукаєте?" class="search_inp" />
+        <input type="submit" href="@Url.Action("TovarForSearch", "Home")" value="Знайти" class="btn search_btn" />
+    </div>
+}
 <div class="row_categoria">
     @foreach (var item in Model)
     {
-    <div class="categ_box">
-        <a href="@Url.Action("TovarsForCategories", "Home", new { item.Id })">
-            <img class="photo" src="@item.Image" />
-            <p>@item.Name</p>
-        </a>
-    </div>
+        <div class="categ_box">
+            <a href="@Url.Action("TovarsForCategories", "Home", new { item.Id })">
+                <img class="photo" src="@item.Image" />
+                <p>@item.Name</p>
+            </a>
+        </div>
     }
 </div>

@@ -1,0 +1,23 @@
+﻿@model IEnumerable<OLX_Course.Models.TovarViewModel>
+
+@{
+    ViewBag.Title = "Товари цього користувача";
+}
+
+<h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Товари цього користувача</h2>
+
+@foreach (var item in Model)
+{
+    <div class="block1">
+        <div class="img_tovar">
+            <img src="~/photo/@item.Image" />
+        </div>
+        <div class="main">
+            <a href="@Url.Action("DetailsTovar", "Home", new { item.Id })"><h3 class="nameTovar"> @Html.DisplayFor(modelItem => item.Name)</h3></a>
+            <p class="cityTovar">  @Html.DisplayFor(modelItem => item.City_Name)</p>
+        </div>
+        <div class="cost">
+            <h3 class="costTovar">  @Html.DisplayFor(modelItem => item.Cost) грн</h3>
+        </div>
+    </div>
+}

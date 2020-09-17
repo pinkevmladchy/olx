@@ -9,7 +9,7 @@
         <div class="block2">
             <div class="user">
                 <h2>@Model.User_name</h2>
-                <button class="view">Дивитись всі оголошення</button>
+                <a href="@Url.Action("TovarsUser", "Home", new { Model.User_name })" class="btn view">Дивитись всі оголошення</a>
             </div>
         </div>
     </div>
@@ -19,7 +19,7 @@
                 <h1>@Model.Name</h1>
             </div>
             <div class="img">
-                <img src="@Model.Images.First()">
+                <img src="~/photo/@Model.Images.First()">
             </div>
         </div>
         <div class="block5">
@@ -29,7 +29,7 @@
             <div class="t2">
                 @foreach(var item in Model.Images)
                 {
-                    <img src="~/photo/" + @item/>
+                    <img src="~/photo/@item"/>
                 }
             </div>
         </div>
